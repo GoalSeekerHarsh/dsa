@@ -17,7 +17,9 @@ void merge(int *arr, int s, int e) {
         first[i] = arr[mainArrayIndex++];
     }
 
-    mainArrayIndex = mid+1;
+    // mainArrayIndex = mid+1; 
+    //this statement is not needed because after the first loop, the mainArrayIndex automatically reaches mid + 1
+    
     for(int i=0; i<len2; i++) {
         second[i] = arr[mainArrayIndex++];
     }

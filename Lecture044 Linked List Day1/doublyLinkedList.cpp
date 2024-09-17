@@ -107,6 +107,7 @@ void insertAtPosition(Node* & tail, Node* &head, int position, int d) {
 
     nodeToInsert ->next = temp -> next;
     temp -> next -> prev = nodeToInsert;
+    nodeToInsert->next = temp->next;
     temp -> next = nodeToInsert;
     nodeToInsert -> prev = temp;
 }

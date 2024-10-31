@@ -17,7 +17,7 @@ void update(int arr[], int n) {
     cout << "Going back to main function" << endl;
 }
 
-
+//main method
 int main() {
 
     int arr[3] = {1,2,3};

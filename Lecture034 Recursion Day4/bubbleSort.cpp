@@ -6,6 +6,7 @@ void sortArray(int *arr, int n) {
     //base case - already sorted
     if(n == 0 || n == 1) {
         return ;
+    
     }
 
     //1 case sovle karlia - largest element ko end me rakh dega

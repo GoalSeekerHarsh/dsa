@@ -26,7 +26,7 @@ int main() {
 
     C obj;
     //obj.func();
-
+    
     obj.A::func() ;
     obj.B::func();
 

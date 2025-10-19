@@ -64,21 +64,34 @@ class Hero {
     }
 
     void setName(char name[]) {
-        strcpy(this->name, name);
+        strcpy(this->name, name); //c type string bz default store if string storing in array
     }
 
     static int random() {
-        return timeToComplete ;
+        return timeToComplete ;//belong to class not in any object scope resolution operator 
+        //static functions allowed to fetch static element of class
     }
-
+    Hero &operator =(const Hero &obj){
+        if(this==&obj){
+            return *this;
+        }
+        this->health=obj.health;
+        this->level=obj.level;
+        //delete this->name; /////why this line wrong 
+       // char *name=new char[100];////////why wrong 
+       // *name=*(obj.name); //
+        return *this;
+    }
     //Destructor
     ~Hero() {   
         cout << "Destructor bhai called" << endl;
     }
 
 };
+ int Hero::health=15; // Removed: You should remove the line that tries to define the non-static member 'health' outside the class, 
+                        //as only static members can be defined this way.
 
-int Hero::timeToComplete = 5;
+int Hero::timeToComplete = 5;  // belong to class not in any object scope resolution operator
 
 int main() {
 

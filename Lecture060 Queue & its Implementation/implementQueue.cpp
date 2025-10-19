@@ -1,3 +1,7 @@
+#include<iostream>
+using namespace std;
+                     
+
 class Queue {
     
     int* arr;
@@ -6,8 +10,8 @@ class Queue {
     int size;
     
 public:
-    Queue() {
-        size = 100001;
+    Queue(int size) {
+        this->size = size;
         arr = new int[size];
         qfront = 0;
         rear = 0;
@@ -61,3 +65,19 @@ public:
         }
     }
 };
+int main(){
+    Queue q(3);
+    q.enqueue(4);cout<< q.front()<<endl;
+    q.enqueue(6);cout<< q.front()<<endl;
+    q.enqueue(9);cout<< q.front()<<endl;
+    q.dequeue();cout<< q.front()<<endl;
+    q.dequeue();cout<< q.front()<<endl;
+    q.enqueue(5);cout<< q.front()<<endl;
+    q.dequeue();cout<< q.front()<<endl;
+    q.dequeue();
+    int ans=  q.front();
+    cout << ans <<endl;
+    q.enqueue(4);cout<< q.front()<<endl;
+
+return 0;
+}

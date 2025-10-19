@@ -13,7 +13,10 @@ class Node {
         this -> data = data;
         this -> next = NULL;
     }
+    Node &operator +(){
 
+    }
+//shallow copy ->copy assignment operator && default copy constructor
     //destructor
     ~Node() {
         int value = this -> data;
@@ -44,7 +47,7 @@ void insertAtTail(Node* &tail, int d) {
 
 void print(Node* &head) {
 
-    if(head == NULL) {
+    if(head == NULL) { /// this case when happened 
         cout << "List is empty "<< endl;
         return ;
     }

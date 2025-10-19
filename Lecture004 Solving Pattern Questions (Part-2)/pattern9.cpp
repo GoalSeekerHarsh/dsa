@@ -3,8 +3,8 @@ using namespace std;
 
 int main() {
 
-    int n;
-    cin>>n;
+    int n=10;
+   
 
     int row = 1;
 
